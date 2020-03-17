@@ -20,10 +20,20 @@ id INTEGER PRIMARY KEY,
 title TEXT,
 year NUMERIC,
 series_id INTEGER
+character_id INTEGER
 );
 
 CREATE TABLE characters  (
 id INTEGER PRIMARY KEY,
-name TEXT
-
+name TEXT,
+motto TEXT,
+species TEXT,
+book_id INTEGER,
+author_id TEXT
 );
+
+CREATE TABLE character_books (
+id INTEGER PRIMARY KEY,
+book_id INTEGER,
+character_id INTEGER
+)
